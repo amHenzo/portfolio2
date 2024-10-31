@@ -26,6 +26,12 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/all3DView.vue')
     }
+    ,
+    {
+      path: '/Contactme',
+      name: 'Contactme',
+      component: () => import('../views/Contactme.vue')
+    }
   ]
 })
 

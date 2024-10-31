@@ -28,8 +28,11 @@ i {
   display: flex;
   place-items: center;
   place-content: center;
+  position: relative;
+  left: 10px;
+  top: calc(50% - 25px);
   width: 32px;
-  height: 32px;
+  height: 70px;
   color: var(--color-text);
 }
 
@@ -44,11 +47,12 @@ h3 {
   .item {
     margin-top: 0;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+
   }
 
   i {
     top: calc(50% - 25px);
-    left: -26px;
+    left: 15px;
     position: absolute;
     border: 1px solid var(--color-border);
     background: var(--color-background);

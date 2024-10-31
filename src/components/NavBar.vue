@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar" ref="navbar">
-    <div class="logo">portfolio</div>
+    <div class="logo"><RouterLink to="/" @click="closeMenu">portfolio</RouterLink></div>
 
     <div class="burger" @click="toggleMenu">
       <div class="line"></div>
@@ -12,6 +12,7 @@
       <li><RouterLink to="/" @click="closeMenu">Home</RouterLink></li>
       <li><RouterLink to="/about" @click="closeMenu">About</RouterLink></li>
       <li><RouterLink to="/all3DView" @click="closeMenu">The things I 3D</RouterLink></li>
+      <li><RouterLink to="/Contactme" @click="closeMenu">Contact me</RouterLink></li>
     </ul>
   </nav>
 </template>
@@ -34,7 +35,7 @@ export default {
     },
     handleClickOutside(event) {
       const navbar = this.$refs.navbar;
-      if (navbar && !navbar.contains(event.target)) {
+      if (!navbar.contains(event.target)) {
         this.isMenuActive = false;
       }
     },
@@ -64,7 +65,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 15;
 }
 
 .logo {
@@ -74,6 +75,8 @@ body {
 
 .nav-links {
   display: flex;
+  padding-inline-start: 0px;
+  padding-right: 40px;
   list-style: none;
   transition: transform 0.5s ease;
 }
@@ -107,7 +110,7 @@ body {
     position: absolute;
     right: 0;
     height: 100vh;
-    top: 0;
+    top: 100%;
     flex-direction: column;
     background-color: #333;
     opacity: 70%;
@@ -115,10 +118,13 @@ body {
     align-items: center;
     width: 100%;
     transform: translateX(100%);
+    z-index: 10;
   }
 
   .nav-links.nav-active {
     transform: translateX(0);
+    margin-top: 0;
+    padding-right: 0px;
   }
 
   .nav-links li {

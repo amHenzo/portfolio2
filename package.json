@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "pinia": "^2.1.7",
     "three": "^0.168.0",
     "tree": "^0.1.3",
