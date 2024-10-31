@@ -18,6 +18,47 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
+form {
+  padding-top:25px;
+  margin:auto;
+}
+
+input, textarea {
+  width: 92%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+label{
+  padding: 10px;
+}
+
+button {
+  background-color: #45a049;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 10px;
+    padding-left: 1px;
+    padding-right: 2px;
+}
+#name{
+  min-width: 50px;
+
+}
 
 @media (min-width: 1024px) {
   body {
@@ -30,4 +71,20 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    
+  }
+  #name{
+    min-width: 50px;
+    width: 30%;
+  
+  }
+  #email{
+    width: 30%;
+  }
+  
 }

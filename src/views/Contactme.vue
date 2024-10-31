@@ -1,24 +1,26 @@
 <template>
-  <form @submit.prevent="submitForm">
-    <div>
-      <label for="name">Name:</label>
-      <textarea id="name" v-model="name" required></textarea>
-    </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" v-model="email" required />
-    </div>
-    <div>
-      <label for="message">Message:</label>
-      <textarea id="message" v-model="message" required></textarea>
-    </div>
+  <div class="container">
+    <form @submit.prevent="submitForm" class="form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" v-model="name" required></input>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" v-model="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" v-model="message" required></textarea>
+      </div>
 
-    <!-- reCAPTCHA Widget -->
-    <div id="recaptcha-container" class="g-recaptcha" :data-sitekey="siteKey"></div>
+      <div id="recaptcha-container" class="g-recaptcha" :data-sitekey="siteKey"></div>
 
-    <button type="submit">Send</button>
-  </form>
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </template>
+>
 
 <script>
 import emailjs from 'emailjs-com';
@@ -84,7 +86,59 @@ export default {
 </script>
 
 <style scoped>
-form {
-  padding-top: 50px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: aliceblue;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+button {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 304px;
+  align-self: center;
+}
+.g-recaptcha{
+  align-self: center;
+}
+textarea{
+  min-height: 200px;
+}
+
+
 </style>
+

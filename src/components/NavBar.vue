@@ -76,7 +76,6 @@ body {
 .nav-links {
   display: flex;
   padding-inline-start: 0px;
-  padding-right: 40px;
   list-style: none;
   transition: transform 0.5s ease;
 }
@@ -105,7 +104,7 @@ body {
 }
 
 /* phone */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .nav-links {
     position: absolute;
     right: 0;
@@ -133,7 +132,6 @@ body {
 
   .burger {
     display: block;
-    margin-right: 1.5rem;
   }
 }
 </style>
