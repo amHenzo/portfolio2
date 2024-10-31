@@ -13,15 +13,15 @@
       <textarea id="message" v-model="message" required></textarea>
     </div>
 
-    <div id="recaptcha-container"></div>
+    <!-- reCAPTCHA Widget -->
+    <div id="recaptcha-container" class="g-recaptcha" :data-sitekey="siteKey"></div>
 
     <button type="submit">Send</button>
   </form>
 </template>
-  
-  <script>
-  
-  import emailjs from 'emailjs-com';
+
+<script>
+import emailjs from 'emailjs-com';
 
 export default {
   data() {
@@ -38,33 +38,27 @@ export default {
   },
   methods: {
     loadRecaptcha() {
-      if (!document.getElementById('recaptcha-script')) {
-        const script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js';
-        script.async = true;
-        script.defer = true;
-        script.id = 'recaptcha-script';
-        script.onload = this.renderRecaptcha;
-        document.head.appendChild(script);
-      } else {
-        this.renderRecaptcha();
-      }
+      const script = document.createElement('script');
+      script.src = 'https://www.google.com/recaptcha/api.js';
+      script.async = true;
+      script.defer = true;
+      script.onload = this.renderRecaptcha;
+      document.head.appendChild(script);
     },
     renderRecaptcha() {
       window.grecaptcha.render('recaptcha-container', {
         sitekey: this.siteKey,
-        callback: (token) => {
-          this.recaptchaToken = token;
-        },
       });
     },
     async submitForm() {
+      this.recaptchaToken = grecaptcha.getResponse();
+
       if (!this.recaptchaToken) {
         alert('Veuillez compléter le captcha.');
         return;
       }
 
-      //email template
+      // EmailJS
       const templateParams = {
         email: this.email,
         from_name: this.name,
@@ -74,24 +68,23 @@ export default {
 
       try {
         await emailjs.send(
-          'service_ab5tew6',
-          'template_gdcelst',
+          'service_ab5tew6', 
+          'template_gdcelst', 
           templateParams,
           '86fplQJwzU0UPKPjj'
         );
-        alert('Message sent successfully');
+        alert('Message envoyé');
       } catch (error) {
-        alert('Error sending message: ' + error);
+        alert('Erreur envoi du message : ' + error);
         console.error(error);
       }
     },
   },
 };
+</script>
 
-  </script>
-  
-  <style scoped>
-  form{
-    padding-top:50px;
-  }
-  </style>
+<style scoped>
+form {
+  padding-top: 50px;
+}
+</style>
