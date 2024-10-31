@@ -29,4 +29,3 @@ coverage
 
 *.tsbuildinfo
 webhook_handler.sh
-deploy_script.sh
