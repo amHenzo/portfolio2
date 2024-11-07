@@ -16,6 +16,7 @@ else
 fi
 
 if [ "$latest_commit" != "$last_commit" ]; then
+    echo "updating to :"
     docker build -t vue-nginx .
 
     # continue if docker not runing
@@ -23,7 +24,7 @@ if [ "$latest_commit" != "$last_commit" ]; then
 
     docker rm vue-nginx || true
 
-    docker run -d --name vue-nginx -p 70:70 vue-nginx
+    docker run -d --name vue-nginx -p 70:70 --restart always vue-nginx
 
     echo "$latest_commit" > last_commit.txt
 else

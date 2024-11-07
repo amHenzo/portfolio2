@@ -52,7 +52,7 @@ export default {
       const scene = new THREE.Scene();
       scene.background = new THREE.Color(0xdddddd);
 
-      const camera = new THREE.PerspectiveCamera(50, container.offsetWidth / container.offsetHeight, 1, 1000);
+      const camera = new THREE.PerspectiveCamera(20, container.offsetWidth / container.offsetHeight, 1, 1000);
       camera.position.set(0, 100, 220);
       scene.add(camera);
 

@@ -28,6 +28,12 @@ const router = createRouter({
     }
     ,
     {
+      path: '/alldevView',
+      name: 'alldevView',
+      component: () => import('../views/allDevView.vue')
+    }
+    ,
+    {
       path: '/Contactme',
       name: 'Contactme',
       component: () => import('../views/Contactme.vue')

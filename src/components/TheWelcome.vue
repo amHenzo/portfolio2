@@ -5,6 +5,7 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import IconVlc from './icons/IconVlc.vue'
 </script>
 
 <template>
@@ -14,8 +15,18 @@ import SupportIcon from './icons/IconSupport.vue'
     </template>
     <template #heading>WHY</template>
     to showcase some of the 
-      <a href="https://cults3d.com/@amzeno" target="_blank" rel="noopener">modelling </a>
+      <a href="https://cults3d.com/@amzeno" target="_blank" rel="noopener">modeling </a>
+    i do and 
+    to showcase some of the 
+      <a href="https://github.com/amHenzo" target="_blank" rel="noopener">coding </a>
     i do
+  </WelcomeItem>
+  <WelcomeItem>
+    <template #icon>
+      <IconVlc />
+    </template>
+    <template #heading>Info</template>
+    this website is still under construction and dosen't show all the things i do 
   </WelcomeItem>
 
   <WelcomeItem>
@@ -25,19 +36,10 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #heading>Tooling</template>
 
     This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
+    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>
+    and i mainly program on visual studio Code
 
-    <br />
 
-    More instructions are available in <code>README.md</code>.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -45,43 +47,30 @@ import SupportIcon from './icons/IconSupport.vue'
       <EcosystemIcon />
     </template>
     <template #heading>Ecosystem</template>
+    running on my own server i recycled with an old pc running <a href="https://www.docker.com" target="_blank" rel="noopener"> Docker</a>,
+     and <a href="https://nginx.org/en/" target="_blank" rel="noopener">nginx </a>, on ubuntu server
 
-    Get official tools and libraries for your project:
+    other tools i used : 
     <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
+    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <CommunityIcon />
     </template>
-    <template #heading>Community</template>
+    <template #heading>Questions ?</template>
 
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
+    You can 
+    <a href="/Contactme" target="_blank" rel="noopener">Contact me </a> so we may discus on working together
+    i will be selling stl on cults3d but you can message me to get the part printed
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <SupportIcon />
     </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
+    <template #heading>Support Me</template>
+    you can support me by following me on cults3d or github
   </WelcomeItem>
 </template>

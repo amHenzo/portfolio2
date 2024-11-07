@@ -3,15 +3,16 @@
     <div class="logo"><RouterLink to="/" @click="closeMenu">portfolio</RouterLink></div>
 
     <div class="burger" @click="toggleMenu">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+      <div class="line" :class="{'cross': isMenuActive}"></div>
+      <div class="line" :class="{'cross': isMenuActive}"></div>
+      <div class="line" :class="{'cross': isMenuActive}"></div>
     </div>
 
     <ul :class="['nav-links', { 'nav-active': isMenuActive }]" @click.stop>
       <li><RouterLink to="/" @click="closeMenu">Home</RouterLink></li>
       <li><RouterLink to="/about" @click="closeMenu">About</RouterLink></li>
-      <li><RouterLink to="/all3DView" @click="closeMenu">The things I 3D</RouterLink></li>
+      <li><RouterLink to="/all3DView" @click="closeMenu">Things I 3D</RouterLink></li>
+      <li><RouterLink to="/alldevView" @click="closeMenu">Things I Dev</RouterLink></li>
       <li><RouterLink to="/Contactme" @click="closeMenu">Contact me</RouterLink></li>
     </ul>
   </nav>
@@ -103,7 +104,23 @@ body {
   transition: all 0.3s ease;
 }
 
-/* phone */
+.burger .line.cross:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.burger .line.cross:nth-child(2) {
+  opacity: 0; 
+}
+
+.burger .line.cross:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+
 @media screen and (max-width: 1024px) {
   .nav-links {
     position: absolute;
