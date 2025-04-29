@@ -29,9 +29,9 @@
         <section class="screenshots">
             <h2>Captures d'écran</h2>
             <div class="screenshots-list">
-                <img src="./screenshot1.png" alt="Screenshot 1" />
-                <img src="./screenshot2.png" alt="Screenshot 2" />
-                <img src="./screenshot3.png" alt="Screenshot 3" />
+                <img src="./Screenshot1.png" alt="Screenshot 1" />
+                <img src="./Screenshot2.png" alt="Screenshot 2" />
+                <img src="./Screenshot3.png" alt="Screenshot 3" />
             </div>
         </section>
 
