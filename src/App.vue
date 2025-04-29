@@ -1,17 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from './components/NavBar.vue'
+import footerbar from './components/footerbar.vue';
 
 
 </script>
 
 <template>
   <header>
-    <Navbar />
+    <!--<Navbar /> for uptrack--> 
   </header> 
   
-
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+  <footer>
+    <footerbar/>
+  </footer>
 </template>
 
 <style scoped>
@@ -48,6 +53,14 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
+footer {
+    flex: 1; 
+  }
+  main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes up the full height of the viewport */
+}
 
 @media (min-width: 1024px) {
   header {
@@ -71,5 +84,6 @@ nav a:first-of-type {
     font-size: 1rem;
     padding: 1rem 0;
   }
+  
 }
 </style>

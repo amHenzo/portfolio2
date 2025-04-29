@@ -3,7 +3,9 @@
 #exit if it fails whitch ?
 cd /home/vuejs/portfolio2 || exit 1
 
-git fetch
+git checkout main || exit 1
+git fetch origin
+git reset --hard origin/main 
 
 # Get the latest commit hash
 latest_commit=$(git rev-parse HEAD)

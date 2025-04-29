@@ -10,9 +10,9 @@
 
     <ul :class="['nav-links', { 'nav-active': isMenuActive }]" @click.stop>
       <li><RouterLink to="/" @click="closeMenu">Home</RouterLink></li>
-      <li><RouterLink to="/about" @click="closeMenu">About</RouterLink></li>
       <li><RouterLink to="/all3DView" @click="closeMenu">Things I 3D</RouterLink></li>
       <li><RouterLink to="/alldevView" @click="closeMenu">Things I Dev</RouterLink></li>
+      <li><RouterLink to="/about" @click="closeMenu">About</RouterLink></li>
       <li><RouterLink to="/Contactme" @click="closeMenu">Contact me</RouterLink></li>
     </ul>
   </nav>

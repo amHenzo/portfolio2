@@ -23,13 +23,6 @@ form {
   margin:auto;
 }
 
-input, textarea {
-  width: 92%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
 label{
   padding: 10px;
 }

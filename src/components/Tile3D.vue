@@ -110,8 +110,8 @@ export default {
   margin: 10px;
 }
 input[type="range"] {
-  -webkit-appearance: none;     /*Chrome */
-  padding: 0;                   /* nécessaire pour IE */
+  -webkit-appearance: none;
+  padding: 0;
   
 }
 .threejs-container {
