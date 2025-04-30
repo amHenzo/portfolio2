@@ -12,6 +12,16 @@
             </p>
         </section>
 
+        <section class="description">
+            <h2>Ils nous soutiennent déjà</h2>
+            <div class="supporter">
+                <img src="./redbull_banner.jpg" alt="Redbull" class="supporter-banner" />
+                <p>
+                    Qui de mieux que la marque emblématique des sports extrêmes pour nous soutenir ! Redbull a accepté de nous soutenir pourquoi pas vous ?
+                </p>
+            </div>
+        </section>
+
         <section>
             <h2>tester l'appli ?</h2>
             <p>
@@ -114,6 +124,24 @@
 
 .description {
     margin-bottom: 32px;
+}
+
+/* Limite la largeur de la bannière Redbull et la centre */
+.supporter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.supporter-banner {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    object-fit: contain;
+    display: block;
 }
 
 .contact {
